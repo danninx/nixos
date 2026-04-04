@@ -1,0 +1,79 @@
+# https://starship.rs/config/
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+$directory\
+$git_branch\
+($bun )($golang )($java )($python )\
+$character\
+"""
+
+right_format = """
+$direnv $nix_shell $time $battery\
+"""
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+[battery]
+format = '[\($percentage\)]($style)'
+# format = '[$symbol$percentage]($style) '
+
+[[battery.display]] # 'bold red' style 
+threshold = 10
+style = 'bold red'
+
+[[battery.display]] # 'bold yellow' style
+threshold = 30
+style = 'bold yellow'
+
+[[battery.display]]
+threshold = 100
+style = 'bold green'
+
+[bun]
+format = '[\(bun( $version)\)]($style)'
+style = 'bold bright-yellow'
+
+[character] # The name of the module we are configuring is 'character'
+success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+
+[directory]
+home_symbol = '~'
+style = 'bold bright-blue'
+
+[fill]
+symbol = " "
+
+[git_status]
+untracked = ""
+
+[golang]
+format = '[\(golang( $version)\)]($style)'
+style = 'bold blue'
+
+[java]
+format = '[\(java( ${version})\)]($style)'
+style = 'bold bright-red'
+
+[nix_shell]
+format = '[\($name\)]($style)'
+impure_msg = ''
+style = 'bold bright-blue'
+symbol = ''
+
+[os]
+disabled = false
+style = "bg:red fg:crust"
+
+[python]
+format = '[\(python [${pyenv_prefix}](bold bright-blue)(${version})( - $virtualenv)\)]($style)'
+style = "bold bright-yellow"
+
+[rust]
+format = '[\(rust( $version)\)]($style)'
+
+[time]
+disabled = false
+format = "[$time]($style)"
+

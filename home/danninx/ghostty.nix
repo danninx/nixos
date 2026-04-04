@@ -1,8 +1,5 @@
 { ... }:
 
-let
-  smear-shader = ./cursor_sweep.glsl;
-in
 {
   programs.ghostty = {
     enable = true;
@@ -17,7 +14,9 @@ in
       window-padding-x = 10;
       window-padding-y = 10;
 
-      custom-shader = "${smear-shader}";
+      custom-shader = "${./cursor_sweep.glsl}";
+      custom-shader-animation = true;
     };
   };
+  home.file.".config/ghostty/shaders/cursor_sweep.glsl".source = ./cursor_sweep.glsl;
 }

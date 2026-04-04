@@ -35,15 +35,19 @@
     variant = "";
   };
 
+  programs.zsh.enable = true;
   users.users.danninx = {
     isNormalUser = true;
     description = "danninx";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [ 
-      git 
-      neovim 
       firefox
+      direnv
+      ghostty
+      git 
+      starship
     ];
+    shell = pkgs.zsh;
   };
 
   nix.settings.experimental-features = [

@@ -4,6 +4,8 @@
   imports = [
     ./ghostty.nix 
     ./nixvim.nix
+    ./starship.nix
+    ./zsh.nix
   ];
 
   home.username = "danninx";
