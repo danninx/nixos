@@ -5,7 +5,10 @@ let
   hyprland-session = "${pkgs.hyprland}/share/wayland-sessions";
 in
 {
-  programs.hyprland.enable = true;
+  programs.hyprland = {
+    enable = true;
+    withUWSM = true;
+  };
 
   environment = {
     systemPackages = with pkgs; [
