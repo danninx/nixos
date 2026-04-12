@@ -1,13 +1,17 @@
-{ config, inputs, lib, pkgs, ... }:
-
 {
+  config,
+  inputs,
+  lib,
+  pkgs,
+  ...
+}: {
   imports = [
     inputs.nixvim.homeModules.nixvim
   ];
 
   programs.nixvim = {
     enable = true;
-    extraPackages = with pkgs; [ alejandra ];
+    extraPackages = with pkgs; [alejandra];
     defaultEditor = true;
 
     viAlias = true;
@@ -27,25 +31,25 @@
 
     keymaps = [
       (lib.mkIf (!config.programs.nixvim.plugins.oil.enable) {
-        mode = [ "n" ];
+        mode = ["n"];
         key = "<leader>pv";
         action = "<cmd>Ex<CR>";
         options.desc = "Enter file explorer";
       })
       {
-        mode = [ "n" ];
+        mode = ["n"];
         key = "<leader>n";
         action = "gg=G<C-o>";
         options.desc = "Quick i[n]dent file";
       }
       {
-        mode = [ "n" ];
+        mode = ["n"];
         key = "<leader>c";
         action = "<cmd>%y<CR>";
         options.desc = "[c]opy file";
       }
       {
-        mode = [ "n" ];
+        mode = ["n"];
         key = "<leader>re";
         action = "<cmd>e!<CR>";
         options.desc = "[r]evert [e]dits";
@@ -91,18 +95,21 @@
         autoEnableSources = true;
         settings = {
           sources = [
-            { name = "nvim_lsp"; }
-            { name = "path"; }
-            { name = "buffer"; }
-            { name = "nvim_lsp_signature_help"; }
+            {name = "nvim_lsp";}
+            {name = "path";}
+            {name = "buffer";}
+            {name = "nvim_lsp_signature_help";}
           ];
           mapping = {
-            "<Tab>" = # Lua
-            "cmp.mapping(cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select}), {'i', 's'})";
-            "<S-Tab>" = # Lua
-            "cmp.mapping(cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}), {'i', 's'})";
-            "<CR>" = # Lua
-            "cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace })";
+            "<Tab>" =
+              # Lua
+              "cmp.mapping(cmp.mapping.select_next_item({behavior = cmp.SelectBehavior.Select}), {'i', 's'})";
+            "<S-Tab>" =
+              # Lua
+              "cmp.mapping(cmp.mapping.select_prev_item({behavior = cmp.SelectBehavior.Select}), {'i', 's'})";
+            "<CR>" =
+              # Lua
+              "cmp.mapping.confirm({ select = false, behavior = cmp.ConfirmBehavior.Replace })";
           };
         };
       };
@@ -116,12 +123,12 @@
           enable = true;
           package = pkgs.nil;
           settings = {
-            formatting.command = [ "alejandra" ];
-            cmd = [ pkgs.nil ];
+            formatting.command = ["alejandra"];
+            cmd = [pkgs.nil];
             nix = {
               flake = {
-                autoArchive = true;    
-                autoEvalInputs = null; 
+                autoArchive = true;
+                autoEvalInputs = null;
               };
             };
           };
