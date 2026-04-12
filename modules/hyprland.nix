@@ -12,15 +12,13 @@ in
 
   environment = {
     systemPackages = with pkgs; [
-      wl-clipboard
-    ];
+		wl-clipboard
+	];
   };
 
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
-  security.pam.services.hyprlock = {
-
-  };
+  security.pam.services.hyprlock = { };
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = with pkgs; [

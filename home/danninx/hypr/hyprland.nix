@@ -32,9 +32,10 @@ in
 			"xdg-user-dirs-update"
 			"dbus-update-activation-environment --systemd ALL"
 			"systemctl --user import-environment ALL"
-			"nm-applet &";
-			"hyprpaper &";
-			"hypridle & hyprlock &";
+			"nm-applet &"
+			"hyprpaper &"
+			"hypridle & hyprlock &"
+			"hyprctl setcursor BreezeX-RosePine-Linux 28"
 		];
 
 		general = {
@@ -44,7 +45,7 @@ in
 			col = {
 				active_border = "${purple_tran} ${red_tran} 45deg";
 				inactive_border = transparent;
-			}
+			};
 			resize_on_border = false;
 			allow_tearing = false;
 			layout = "dwindle";
