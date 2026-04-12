@@ -10,7 +10,7 @@ let
 	red_tran = "rgba(f7768e55)";
 	purple = "rgb(bb9af7)";
 	purple_tran = "rgba(bb9af755)";
-	transparent = "rgba(0,0,0,0)";
+	transparent = "rgba(0, 0, 0, 0)";
 in
 {
 	programs.hyprlock = {
@@ -19,7 +19,7 @@ in
 			background = [{
 				monitor = "";
 				blur_passes = 0;
-				color = backgruond;
+				color = background;
 			}];
 
 			general = {
@@ -51,13 +51,13 @@ in
 				fade_on_empty = false;
 				placeholder_text = "<b>$USER</b>";
 				hide_input = false;
-				fail_text = <i>[ Try again ]</i>;
+				fail_text = "<i>[ Try again ]</i>";
 				font_family = font;
 				position = "0, -100";
 				halign = "center";
 				valign = "center";
 				outer_color = transparent;
-				innter_color = transparent;
+				inner_color = transparent;
 				font_color = foreground;
 				fail_color = red;
 				check_color = purple;

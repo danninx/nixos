@@ -3,6 +3,7 @@
 {
   imports = [
     ./ghostty.nix 
+    ./hypr
     ./nixvim.nix
     ./starship.nix
     ./zsh.nix

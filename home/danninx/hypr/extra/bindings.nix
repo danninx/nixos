@@ -2,16 +2,18 @@
 
 let
 mainMod = "SUPER";
+terminal = "ghostty";
+menu = "rofi";
 in
 {
 	wayland.windowManager.hyprland.settings = {
 		bind = [
-			"${mainMod}, T, exec, $terminal"
+			"${mainMod}, T, exec, ${terminal}"
 				"${mainMod}, Q, killactive,"
 				"${mainMod}, V, togglefloating,"
 				"${mainMod}, L, exec, hyprlock"
 				"${mainMod}, F, fullscreen"
-				"${mainMod}, X, exec, $menu"
+				"${mainMod}, X, exec, ${menu}"
 				"${mainMod}, B, global, danni-shell:toggle-bar"
 				"${mainMod}, A, movefocus, l"
 				"${mainMod}, D, movefocus, r"
