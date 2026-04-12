@@ -13,6 +13,7 @@
   boot.initrd.kernelModules = [];
   boot.kernelModules = ["kvm-intel"];
   boot.extraModulePackages = [];
+  boot.consoleLogLevel = 3;
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/87acf3f8-f9d5-4668-bf4b-5e04ea06f69e";
