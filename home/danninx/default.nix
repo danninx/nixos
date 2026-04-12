@@ -9,7 +9,7 @@ in {
   imports = [
     ./ghostty.nix
     ./hypr
-    ./nixvim.nix
+    ./nixvim
     ./starship.nix
     ./zsh.nix
   ];
