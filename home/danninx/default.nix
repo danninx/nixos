@@ -2,10 +2,7 @@
   config,
   pkgs,
   ...
-}: let
-  default = s: "${config.home.homeDirectory}/${s}";
-  media = s: (default "media/${s}");
-in {
+}: {
   imports = [
     ./ghostty.nix
     ./hypr
@@ -26,7 +23,10 @@ in {
     nerd-fonts.jetbrains-mono
   ];
 
-  xdg.userDirs = {
+  xdg.userDirs = let
+    default = s: "${config.home.homeDirectory}/${s}";
+    media = s: (default "media/${s}");
+  in {
     enable = true;
     createDirectories = true;
     setSessionVariables = true;
