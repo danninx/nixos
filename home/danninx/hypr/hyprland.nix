@@ -1,4 +1,4 @@
-{...}: let
+{ pkgs, ...}: let
   font = "JetBrainsMono Nerd Font Bold";
   background = "rgb(1a1b26)";
   darker = "rgb(16161e)";
@@ -19,6 +19,13 @@ in {
     ./extra/env.nix
     ./extra/rules.nix
     ./extra/workspaces.nix
+  ];
+
+  home.packages = with pkgs; [
+      hyprpaper
+      hyprshot
+      rose-pine-cursor
+      swappy
   ];
 
   wayland.windowManager.hyprland = {
@@ -53,13 +60,13 @@ in {
         active_opacity = 1;
         inactive_opacity = 0.8;
         shadow = {
-          enabled = true;
+          enabled = false;
           range = 4;
           render_power = 3;
           color = "rgba(1a1a1aee)";
         };
         blur = {
-          enabled = true;
+          enabled = false;
           size = 3;
           passes = 1;
           vibrancy = 0.1696;
