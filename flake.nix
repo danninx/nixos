@@ -20,7 +20,7 @@
             backupFileExtension = "home.bak";
             useGlobalPkgs = true;
             useUserPackages = true;
-	    extraSpecialArgs = { inherit inputs; };
+            extraSpecialArgs = { inherit inputs; };
             users.danninx = ./home/danninx;
           };
         }
