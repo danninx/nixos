@@ -42,7 +42,6 @@
     extraGroups = ["networkmanager" "wheel"];
     packages = with pkgs; [
       firefox
-      direnv
       ghostty
       git
       starship

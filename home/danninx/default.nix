@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./direnv.nix
     ./ghostty.nix
     ./hypr
     ./nixvim
