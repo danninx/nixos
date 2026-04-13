@@ -37,6 +37,8 @@
     shell = pkgs.zsh;
   };
 
+  services.upower.enable = true;
+
   nix.settings.experimental-features = [ "flakes" "nix-command" ];
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";

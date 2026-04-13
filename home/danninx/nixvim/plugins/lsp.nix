@@ -3,6 +3,7 @@
     enable = true;
     inlayHints = true;
     servers = {
+
       nil_ls = {
         enable = true;
         package = pkgs.nil;
@@ -17,6 +18,8 @@
           };
         };
       };
+
+      qmlls.enable = true;
     };
   };
 }
