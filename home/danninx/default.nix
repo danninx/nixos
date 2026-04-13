@@ -4,6 +4,7 @@
   ...
 }: {
   imports = [
+    ./alethea-shell.nix
     ./direnv.nix
     ./ghostty.nix
     ./hypr
@@ -20,6 +21,7 @@
   };
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
+    discord
     firefox
     nerd-fonts.jetbrains-mono
   ];
