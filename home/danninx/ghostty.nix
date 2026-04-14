@@ -12,6 +12,8 @@
       window-padding-x = 10;
       window-padding-y = 10;
 
+      confirm-close-surface = false;
+
       custom-shader = "${./cursor_sweep.glsl}";
       custom-shader-animation = true;
     };
