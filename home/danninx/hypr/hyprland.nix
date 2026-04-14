@@ -123,6 +123,8 @@ in {
         touchpad = {
           natural_scroll = false;
         };
+        repeat_delay = 200;
+        repeat_rate = 50;
       };
 
       gesture = [
