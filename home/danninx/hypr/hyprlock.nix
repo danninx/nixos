@@ -51,7 +51,7 @@ in {
           dots_spacing = 0.2;
           dots_center = true;
           fade_on_empty = false;
-          placeholder_text = "<b>$USER</b>";
+          placeholder_text = "[ Logged in as <b>$USER</b> ]";
           hide_input = false;
           fail_text = "<i>[ Try again ]</i>";
           font_family = font;
@@ -62,7 +62,7 @@ in {
           inner_color = transparent;
           font_color = foreground;
           fail_color = red;
-          check_color = purple;
+          check_color = foreground;
           capslock_color = orange;
         }
       ];
