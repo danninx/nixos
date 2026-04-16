@@ -22,6 +22,24 @@
       providers.wl-copy.enable = true;
     };
 
+    diagonostics.config = {
+      virtual_text = {
+        spacing = 4;
+        source = "if_many";
+        prefix = "●";
+        severity = {
+          max = "vim.diagnostic.severity.WARN";
+        };
+      };
+      virtual_lines = {
+        enabled = true;
+        severity = {
+          min = "vim.diagnostic.severity.ERROR";
+        };
+      };
+      severity_sort = true;
+    };
+
     opts = {
       clipboard = "unnamedplus";
       expandtab = false;
