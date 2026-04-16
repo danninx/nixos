@@ -22,12 +22,17 @@
     variant = "";
   };
 
-  environment.systemPackages = [ pkgs.vim ];
+  virtualisation.docker = {
+    enable = true;
+    enableOnBoot = true;
+  };
+
+  environment.systemPackages = [ pkgs.vim pkgs.man-pages pkgs.man-pages-posix ];
   programs.zsh.enable = true;
   users.users.danninx = {
     isNormalUser = true;
     description = "danninx";
-    extraGroups = ["networkmanager" "wheel"];
+    extraGroups = [ "docker" "networkmanager" "wheel"];
     packages = with pkgs; [
       firefox
       ghostty
