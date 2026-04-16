@@ -10,6 +10,7 @@
     ./hypr
     ./nixvim
     ./starship.nix
+    ./zoxide.nix
     ./zsh.nix
   ];
 
@@ -23,8 +24,11 @@
   home.packages = with pkgs; [
     discord
     firefox
+    liberation_ttf
     nerd-fonts.jetbrains-mono
   ];
+
+  programs.lazygit.enable = true;
 
   xdg.userDirs = let
     default = s: "${config.home.homeDirectory}/${s}";
