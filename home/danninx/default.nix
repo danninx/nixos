@@ -25,6 +25,7 @@
     discord
     firefox
     liberation_ttf
+    opencode
     nerd-fonts.jetbrains-mono
   ];
 
