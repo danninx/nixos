@@ -28,6 +28,8 @@ in {
       swappy
   ];
 
+  xdg.portal.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = false;

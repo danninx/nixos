@@ -10,6 +10,7 @@
     ./hypr
     ./nixvim
     ./starship.nix
+    ./wofi.nix
     ./zoxide.nix
     ./zsh.nix
   ];
@@ -33,6 +34,10 @@
   ];
 
   programs.lazygit.enable = true;
+  gtk.enable = true;
+  stylix.enable = true;
+  stylix.targets.lazygit.enable = true;
+  stylix.targets.gtk.enable = true;
 
   xdg.userDirs = let
     default = s: "${config.home.homeDirectory}/${s}";
