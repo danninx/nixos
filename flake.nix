@@ -9,6 +9,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nixvim.url = "github:nix-community/nixvim";
 
     alethea-shell = {
@@ -18,8 +23,9 @@
   };
 
   outputs = inputs @ {
-    nixpkgs,
     home-manager,
+    nixpkgs,
+    stylix,
     ...
   }: {
     nixosConfigurations.amara = nixpkgs.lib.nixosSystem {
@@ -27,6 +33,7 @@
       specialArgs = {inherit inputs;};
       modules = [
         ./hosts/amara/configuration.nix
+        stylix.nixosModules.stylix
         home-manager.nixosModules.home-manager
         {
           home-manager = {
