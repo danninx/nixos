@@ -24,9 +24,12 @@
   home.packages = with pkgs; [
     discord
     firefox
+    gnumake
     liberation_ttf
+    obsidian
     opencode
     nerd-fonts.jetbrains-mono
+    wofi
   ];
 
   programs.lazygit.enable = true;

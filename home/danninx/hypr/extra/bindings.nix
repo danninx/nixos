@@ -1,7 +1,7 @@
 {...}: let
   mainMod = "SUPER";
   terminal = "ghostty";
-  menu = "rofi";
+  menu = "wofi --show=drun";
 in {
   wayland.windowManager.hyprland.settings = {
     bind = [
