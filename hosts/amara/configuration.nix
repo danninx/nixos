@@ -12,6 +12,7 @@
     ../../modules/hyprland.nix
     ../../modules/network.nix
     ../../modules/locales.nix
+    ../../modules/java.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
