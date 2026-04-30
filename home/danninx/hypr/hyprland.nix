@@ -1,4 +1,4 @@
-{ pkgs, ...}: let
+{pkgs, ...}: let
   font = "JetBrainsMono Nerd Font Bold";
   background = "rgb(1a1b26)";
   darker = "rgb(16161e)";
@@ -22,10 +22,10 @@ in {
   ];
 
   home.packages = with pkgs; [
-      hyprpaper
-      hyprshot
-      rose-pine-cursor
-      swappy
+    hyprpaper
+    hyprshot
+    rose-pine-cursor
+    swappy
   ];
 
   xdg.portal.enable = true;
