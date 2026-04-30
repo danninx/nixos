@@ -22,20 +22,13 @@
       providers.wl-copy.enable = true;
     };
 
-    diagonostics.config = {
+    diagnostics.settings = {
+      update_in_insert = true;
       virtual_text = {
+        enable = true;
         spacing = 4;
         source = "if_many";
         prefix = "●";
-        severity = {
-          max = "vim.diagnostic.severity.WARN";
-        };
-      };
-      virtual_lines = {
-        enabled = true;
-        severity = {
-          min = "vim.diagnostic.severity.ERROR";
-        };
       };
       severity_sort = true;
     };
