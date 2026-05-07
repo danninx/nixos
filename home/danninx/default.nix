@@ -12,6 +12,7 @@
     ./starship.nix
     ./vscode.nix
     ./wofi.nix
+    ./zed.nix
     ./zoxide.nix
     ./zsh.nix
   ];
