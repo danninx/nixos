@@ -29,7 +29,14 @@
     enableOnBoot = true;
   };
 
-  environment.systemPackages = [pkgs.vim pkgs.man-pages pkgs.man-pages-posix];
+  environment.systemPackages = with pkgs; [
+    brightnessctl
+    htop
+    man-pages
+    man-pages-posix
+    vim
+  ];
+
   programs.zsh.enable = true;
   users.users.danninx = {
     isNormalUser = true;
