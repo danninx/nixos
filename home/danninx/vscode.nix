@@ -1,8 +1,6 @@
-{ pkgs, ... }:
-
-{
+{pkgs, ...}: {
   programs.vscode = {
-    enable = true;
+    enable = false;
     package = pkgs.vscode.fhs;
   };
 }
