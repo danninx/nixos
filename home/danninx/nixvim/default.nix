@@ -4,14 +4,15 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.nixvim.homeModules.nixvim
   ];
 
   programs.nixvim = {
     enable = true;
-    extraPackages = with pkgs; [alejandra];
+    extraPackages = with pkgs; [ alejandra ];
     defaultEditor = true;
 
     viAlias = true;
@@ -46,25 +47,25 @@
 
     keymaps = [
       (lib.mkIf (!config.programs.nixvim.plugins.oil.enable) {
-        mode = ["n"];
+        mode = [ "n" ];
         key = "<leader>pv";
         action = "<cmd>Ex<CR>";
         options.desc = "Enter file explorer";
       })
       {
-        mode = ["n"];
+        mode = [ "n" ];
         key = "<leader>n";
         action = "gg=G<C-o>";
         options.desc = "Quick i[n]dent file";
       }
       {
-        mode = ["n"];
+        mode = [ "n" ];
         key = "<leader>c";
         action = "<cmd>%y<CR>";
         options.desc = "[c]opy file";
       }
       {
-        mode = ["n"];
+        mode = [ "n" ];
         key = "<leader>re";
         action = "<cmd>e!<CR>";
         options.desc = "[r]evert [e]dits";

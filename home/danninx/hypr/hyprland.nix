@@ -1,4 +1,5 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   font = "JetBrainsMono Nerd Font Bold";
   background = "rgb(1a1b26)";
   darker = "rgb(16161e)";
@@ -13,7 +14,8 @@
   terminal = "ghostty";
   fileManager = "dolphin";
   menu = "wofi --show drun";
-in {
+in
+{
   imports = [
     ./extra/bindings.nix
     ./extra/env.nix

@@ -1,6 +1,8 @@
-{config, ...}: let
+{ config, ... }:
+let
   grammars = config.plugins.treesitter.package.builtGrammars;
-in {
+in
+{
   programs.nixvim.plugins.treesitter = {
     enable = true;
     highlight.enable = true;

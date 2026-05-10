@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   plugins.oil = {
     enable = true;
 
@@ -31,7 +32,7 @@
 
   keymaps = lib.mkIf config.plugins.oil.enable [
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<leader>pv";
       action = "<cmd>Oil<CR>";
       options.desc = "Enter oil explorer";

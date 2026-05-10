@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   imports = [
     ./boot.nix
     ./hardware-configuration.nix
@@ -34,7 +35,11 @@
   users.users.danninx = {
     isNormalUser = true;
     description = "danninx";
-    extraGroups = ["docker" "networkmanager" "wheel"];
+    extraGroups = [
+      "docker"
+      "networkmanager"
+      "wheel"
+    ];
     packages = with pkgs; [
       firefox
       ghostty
@@ -65,7 +70,10 @@
   };
   services.upower.enable = true;
 
-  nix.settings.experimental-features = ["flakes" "nix-command"];
+  nix.settings.experimental-features = [
+    "flakes"
+    "nix-command"
+  ];
   nixpkgs.config.allowUnfree = true;
   system.stateVersion = "25.11";
 }

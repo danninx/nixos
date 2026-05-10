@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   plugins.lsp = {
     enable = true;
     inlayHints = true;
@@ -27,7 +28,13 @@
             usePlaceholders = true;
             completeUnimported = true;
             staticcheck = true;
-            directoryFilters = ["-.git" "-.vscode" "-.idea" "-.vscode-test" "-node_modules"];
+            directoryFilters = [
+              "-.git"
+              "-.vscode"
+              "-.idea"
+              "-.vscode-test"
+              "-node_modules"
+            ];
             semanticTokens = true;
           };
         };
@@ -37,8 +44,8 @@
         enable = true;
         package = pkgs.nil;
         settings = {
-          formatting.command = ["alejandra"];
-          cmd = [pkgs.nil];
+          formatting.command = [ "alejandra" ];
+          cmd = [ pkgs.nil ];
           nix = {
             flake = {
               autoArchive = true;

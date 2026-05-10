@@ -1,8 +1,10 @@
-{...}: let
+{ ... }:
+let
   mainMod = "SUPER";
   terminal = "ghostty";
   menu = "wofi --show=drun";
-in {
+in
+{
   wayland.windowManager.hyprland.settings = {
     bind = [
       "${mainMod}, T, exec, ${terminal}"

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   wayland.windowManager.hyprland.settings = {
     workspace = [
       "1, persistent:true"

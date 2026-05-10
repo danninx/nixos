@@ -1,6 +1,7 @@
-{config, ...}: {
-  boot.kernelParams = ["nvidia-drm.fbdev=1"];
-  services.xserver.videoDrivers = ["nvidia"];
+{ config, ... }:
+{
+  boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
   hardware.graphics.enable = true;
   hardware.nvidia = {
     modesetting.enable = true;

@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   xdg.configFile."uwsm/env".text = ''
     export XCURSOR_SIZE=24
     export HYPRCURSOR_THEME=BreezeX-RosePine-Linux

@@ -1,6 +1,8 @@
-{pkgs, ...}: let
+{ pkgs, ... }:
+let
   tuigreet = "${pkgs.tuigreet}/bin/tuigreet";
-in {
+in
+{
   programs.hyprland = {
     enable = true;
     withUWSM = true;
@@ -21,7 +23,7 @@ in {
 
   programs.hyprlock.enable = true;
   services.hypridle.enable = true;
-  security.pam.services.hyprlock = {};
+  security.pam.services.hyprlock = { };
 
   xdg.portal.enable = true;
   xdg.portal.extraPortals = with pkgs; [

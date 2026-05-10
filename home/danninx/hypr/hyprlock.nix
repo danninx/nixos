@@ -1,4 +1,5 @@
-{...}: let
+{ ... }:
+let
   font = "JetBrainsMono Nerd Font Bold";
   background = "rgb(1a1b26)";
   darker = "rgb(16161e)";
@@ -9,7 +10,8 @@
   purple = "rgb(bb9af7)";
   purple_tran = "rgba(bb9af755)";
   transparent = "rgba(0, 0, 0, 0)";
-in {
+in
+{
   programs.hyprlock = {
     enable = true;
     settings = {

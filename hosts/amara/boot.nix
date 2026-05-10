@@ -1,10 +1,11 @@
-{...}: {
+{ ... }:
+{
   boot.loader = {
     efi.canTouchEfiVariables = true;
     efi.efiSysMountPoint = "/boot";
     grub = {
       configurationLimit = 8;
-      devices = ["nodev"];
+      devices = [ "nodev" ];
       efiSupport = true;
       enable = true;
       extraConfig = ''

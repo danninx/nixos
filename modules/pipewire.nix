@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -7,5 +8,5 @@
     alsa.support32Bit = true;
     pulse.enable = true;
   };
-  environment.systemPackages = [pkgs.pwvucontrol];
+  environment.systemPackages = [ pkgs.pwvucontrol ];
 }

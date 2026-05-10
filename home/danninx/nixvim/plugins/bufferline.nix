@@ -2,7 +2,8 @@
   config,
   lib,
   ...
-}: {
+}:
+{
   plugins.bufferline = {
     enable = true;
 
@@ -14,8 +15,12 @@
       };
 
       highlights = {
-        background = {bg = "none";};
-        fill = {bg = "none";};
+        background = {
+          bg = "none";
+        };
+        fill = {
+          bg = "none";
+        };
       };
     };
   };

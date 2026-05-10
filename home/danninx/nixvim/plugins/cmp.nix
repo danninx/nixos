@@ -1,4 +1,5 @@
-{...}: {
+{ ... }:
+{
   plugins = {
     blink-cmp = {
       enable = true;
@@ -25,7 +26,12 @@
 
         fuzzy.implementation = "prefer_rust_with_warning";
         signature.enabled = true;
-        sources.default = ["lsp" "path" "snippets" "buffer"];
+        sources.default = [
+          "lsp"
+          "path"
+          "snippets"
+          "buffer"
+        ];
       };
     };
 
