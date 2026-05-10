@@ -29,7 +29,6 @@
   home.packages = with pkgs; [
     discord
     fastfetch
-    gnumake
     liberation_ttf
     obsidian
     opencode
