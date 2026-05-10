@@ -29,6 +29,7 @@
   home.packages = with pkgs; [
     discord
     fastfetch
+    kdePackages.dolphin
     liberation_ttf
     obsidian
     opencode
@@ -43,8 +44,9 @@
   stylix = {
     enable = true;
     targets = {
-      lazygit.enable = true;
       gtk.enable = true;
+      lazygit.enable = true;
+      qt.enable = true;
     };
   };
 

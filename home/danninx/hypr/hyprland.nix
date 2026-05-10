@@ -20,7 +20,6 @@ in
   ];
 
   home.packages = with pkgs; [
-    kdePackages.dolphin
     hyprpaper
     hyprshot
     rose-pine-cursor
