@@ -26,6 +26,7 @@
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     discord
+    fastfetch
     firefox
     gnumake
     liberation_ttf

@@ -35,6 +35,7 @@ in {
       "${mainMod}, R, workspace, name:reading"
       "${mainMod} and SHIFT, R, movetoworkspace, name:reading"
       "${mainMod} and SHIFT, S, exec, hyprshot --freeze --clipboard-only --mode region; sleep 0.5s && wl-paste | swappy -f -"
+      ", Print, exec, hyprshot --clipboard-only --mode output; sleep 0.5s && wl-paste | swappy -f -"
     ];
 
     bindm = [
