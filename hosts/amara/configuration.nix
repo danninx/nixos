@@ -41,7 +41,6 @@
       "wheel"
     ];
     packages = with pkgs; [
-      firefox
       ghostty
       git
       starship
