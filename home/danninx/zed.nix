@@ -24,6 +24,7 @@
         copilot = false;
       };
 
+      load_direnv = "direct";
       vim_mode = true;
       icon_theme = "Material Icon Theme";
       ui_font_size = 16;

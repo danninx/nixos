@@ -27,7 +27,9 @@
     nixpkgs,
     stylix,
     ...
-  }: {
+  }: let
+    pkgs-x86 = import nixpkgs {system = "x86_64-linux";};
+  in {
     nixosConfigurations.amara = nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       specialArgs = {inherit inputs;};
@@ -47,6 +49,13 @@
       ];
     };
 
-    formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.alejandra;
+    devShells.x86_64-linux.default = pkgs-x86.mkShell {
+      buildInputs = with pkgs-x86; [
+        nil
+        nixd
+      ];
+    };
+
+    formatter.x86_64-linux = pkgs-x86.alejandra;
   };
 }
