@@ -29,6 +29,8 @@ in
 
   xdg.portal.enable = true;
 
+  services.polkit-gnome.enable = true;
+
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = false;
