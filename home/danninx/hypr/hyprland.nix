@@ -10,10 +10,6 @@ let
   purple = "rgb(bb9af7)";
   purple_tran = "rgba(bb9af755)";
   transparent = "rgba(0,0,0,0)";
-
-  terminal = "ghostty";
-  fileManager = "dolphin";
-  menu = "wofi --show drun";
 in
 {
   imports = [
@@ -24,6 +20,7 @@ in
   ];
 
   home.packages = with pkgs; [
+    kdePackages.dolphin
     hyprpaper
     hyprshot
     rose-pine-cursor
