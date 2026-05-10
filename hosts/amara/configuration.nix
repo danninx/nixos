@@ -1,19 +1,17 @@
-{
-  config,
-  pkgs,
-  ...
-}: {
+{pkgs, ...}: {
   imports = [
     ./boot.nix
     ./hardware-configuration.nix
     ./nvidia.nix
 
     ../../modules/bluetooth.nix
+    ../../modules/containers.nix
     ../../modules/hyprland.nix
-    ../../modules/network.nix
-    ../../modules/locales.nix
     ../../modules/java.nix
+    ../../modules/locales.nix
+    ../../modules/network.nix
     ../../modules/pipewire.nix
+    ../../modules/stylix.nix
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
@@ -22,11 +20,6 @@
   services.xserver.xkb = {
     layout = "us";
     variant = "";
-  };
-
-  virtualisation.docker = {
-    enable = true;
-    enableOnBoot = true;
   };
 
   environment.systemPackages = with pkgs; [
@@ -71,35 +64,6 @@
     };
   };
   services.upower.enable = true;
-
-  stylix = {
-    enable = true;
-    targets.gtk.enable = true;
-
-    autoEnable = false;
-    base16Scheme = "${pkgs.base16-schemes}/share/themes/tokyo-night-dark.yaml";
-    fonts = {
-      serif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Serif";
-      };
-
-      sansSerif = {
-        package = pkgs.dejavu_fonts;
-        name = "DejaVu Sans";
-      };
-
-      monospace = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono NFM";
-      };
-
-      emoji = {
-        package = pkgs.nerd-fonts.jetbrains-mono;
-        name = "JetBrainsMono NFP";
-      };
-    };
-  };
 
   nix.settings.experimental-features = ["flakes" "nix-command"];
   nixpkgs.config.allowUnfree = true;
