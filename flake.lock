@@ -9,11 +9,11 @@
         "quickshell": "quickshell"
       },
       "locked": {
-        "lastModified": 1776194008,
-        "narHash": "sha256-RMdZqeKKCV+U57eKPUzjRLACTckPjEsGakIduQHx3cs=",
+        "lastModified": 1778378867,
+        "narHash": "sha256-2oQRLeMulQ5HV6Y0+RGZLi2qwJ3+jetCfN8wFvLb7fs=",
         "owner": "danninx",
         "repo": "alethea-shell",
-        "rev": "a7e630c176c234be3702c5b8af4b6a6ac59d983d",
+        "rev": "7d9d739f26255b7591d3964f288911db4d91c09a",
         "type": "gitlab"
       },
       "original": {
