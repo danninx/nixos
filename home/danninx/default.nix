@@ -39,9 +39,14 @@
   programs.lazygit.enable = true;
   gtk.enable = true;
   gtk.gtk4.theme = config.gtk.theme;
-  stylix.enable = true;
-  stylix.targets.lazygit.enable = true;
-  stylix.targets.gtk.enable = true;
+
+  stylix = {
+    enable = true;
+    targets = {
+      lazygit.enable = true;
+      gtk.enable = true;
+    };
+  };
 
   xdg.userDirs =
     let
