@@ -22,40 +22,57 @@
     };
   };
 
-  outputs = inputs @ {
-    home-manager,
-    nixpkgs,
-    stylix,
-    ...
-  }: let
-    pkgs-x86 = import nixpkgs {system = "x86_64-linux";};
-  in {
-    nixosConfigurations.amara = nixpkgs.lib.nixosSystem {
-      system = "x86_64-linux";
-      specialArgs = {inherit inputs;};
-      modules = [
-        ./hosts/amara/configuration.nix
-        stylix.nixosModules.stylix
-        home-manager.nixosModules.home-manager
+  outputs =
+    inputs@{
+      home-manager,
+      nixpkgs,
+      stylix,
+      ...
+    }:
+    let
+      systems = [
+        "x86_64-linux"
+        "aarch64-linux"
+        "aarch64-darwin"
+        "x86_64-darwin"
+      ];
+      forAllSystems = nixpkgs.lib.genAttrs systems;
+    in
+    {
+      nixosConfigurations.amara = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        specialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/amara/configuration.nix
+          stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager = {
+              backupFileExtension = "home.bak";
+              useGlobalPkgs = true;
+              useUserPackages = true;
+              extraSpecialArgs = { inherit inputs; };
+              users.danninx = ./home/danninx;
+            };
+          }
+        ];
+      };
+
+      devShells = forAllSystems (
+        system:
+        let
+          pkgs = nixpkgs.legacyPackages.${system};
+        in
         {
-          home-manager = {
-            backupFileExtension = "home.bak";
-            useGlobalPkgs = true;
-            useUserPackages = true;
-            extraSpecialArgs = {inherit inputs;};
-            users.danninx = ./home/danninx;
+          default = pkgs.mkShell {
+            packages = with pkgs; [
+              nil
+              nixd
+            ];
           };
         }
-      ];
-    };
+      );
 
-    devShells.x86_64-linux.default = pkgs-x86.mkShell {
-      buildInputs = with pkgs-x86; [
-        nil
-        nixd
-      ];
+      formatter = forAllSystems (system: nixpkgs.legacyPackages.${system}.alejandra);
     };
-
-    formatter.x86_64-linux = pkgs-x86.alejandra;
-  };
 }
