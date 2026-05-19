@@ -11,7 +11,7 @@
       "make"
       "material-icon-theme"
       "nix"
-      "tokyo-night-themes"
+      "tokyo-night"
       "toml"
     ];
 
