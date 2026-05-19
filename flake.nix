@@ -39,23 +39,44 @@
       forAllSystems = nixpkgs.lib.genAttrs systems;
     in
     {
-      nixosConfigurations.amara = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        specialArgs = { inherit inputs; };
-        modules = [
-          ./hosts/amara/configuration.nix
-          stylix.nixosModules.stylix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              backupFileExtension = "home.bak";
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              extraSpecialArgs = { inherit inputs; };
-              users.danninx = ./home/danninx;
-            };
-          }
-        ];
+      nixosConfigurations = {
+        amara = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/amara/configuration.nix
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                backupFileExtension = "home.bak";
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                users.danninx = ./home/danninx;
+              };
+            }
+          ];
+        };
+
+        babel = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/babel/configuration.nix
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                backupFileExtension = "home.bak";
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                users.danninx = ./home/danninx;
+              };
+            }
+          ];
+        };
       };
 
       devShells = forAllSystems (
