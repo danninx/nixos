@@ -1,7 +1,19 @@
 # nixos
 My revamped NixOS configuration
 
-Host selection done via the makefile (defaults to current hostname):
-```sh
-make rebuild HOST=test
+## Shortcuts
+### Rebuild
 ```
+# rebuild current host
+make
+
+# rebuild specific host
+make HOST=babel
+make rebuild HOST=babel
+```
+
+### Format/Lint
+```
+make format
+```
+
