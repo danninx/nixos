@@ -7,6 +7,7 @@
 
     ../../modules/bluetooth.nix
     ../../modules/containers.nix
+    ../../modules/games.nix
     ../../modules/hyprland.nix
     ../../modules/java.nix
     ../../modules/locales.nix
