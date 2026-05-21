@@ -4,13 +4,16 @@
     enable = true;
 
     extensions = [
+      "ansible"
       "dockerfile"
       "docker-compose"
       "golangci-lint"
       "html"
+      "ini"
       "make"
       "material-icon-theme"
       "nix"
+      "opentofu"
       "tokyo-night"
       "toml"
     ];
