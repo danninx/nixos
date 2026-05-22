@@ -61,6 +61,8 @@
     };
   };
 
+  networking.firewall.allowedTCPPorts = [ 22 ];
+
   nix.settings.experimental-features = [
     "flakes"
     "nix-command"
