@@ -59,6 +59,27 @@
         show_sign_in = false;
         show_project_items = true;
       };
+
+      file_types = {
+        Ansible = [
+          "**.ansible.yml"
+          "**.ansible.yaml"
+          "**/defaults/*.yml"
+          "**/defaults/*.yaml"
+          "**/meta/*.yml"
+          "**/meta/*.yaml"
+          "**/tasks/*.yml"
+          "**/tasks/*.yaml"
+          "**/handlers/*.yml"
+          "**/handlers/*.yaml"
+          "**/group_vars/*.yml"
+          "**/group_vars/*.yaml"
+          "**/playbooks/*.yaml"
+          "**/playbooks/*.yml"
+          "**playbook*.yaml"
+          "**playbook*.yml"
+        ];
+      };
     };
   };
 }
