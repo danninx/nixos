@@ -5,6 +5,7 @@
 
     extensions = [
       "ansible"
+      "discord-presence"
       "dockerfile"
       "docker-compose"
       "golangci-lint"
