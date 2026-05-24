@@ -3,6 +3,7 @@
 {
   wayland.windowManager.hyprland.settings = {
     windowrule = [
+      "match:class ^(.*)$, idle_inhibit fullscreen"
     ];
   };
 }
