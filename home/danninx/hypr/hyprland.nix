@@ -33,6 +33,7 @@ in
   wayland.windowManager.hyprland = {
     enable = true;
     systemd.enable = false;
+    configType = "hyprlang";
 
     settings = {
       exec-once = [
@@ -104,7 +105,6 @@ in
       };
 
       dwindle = {
-        pseudotile = true;
         preserve_split = true;
       };
 
