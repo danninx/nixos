@@ -30,6 +30,7 @@
     man-pages
     man-pages-posix
     vim
+    keybase-gui
   ];
 
   programs.zsh.enable = true;
@@ -48,6 +49,14 @@
     ];
     shell = pkgs.zsh;
   };
+
+  services.ollama = {
+    enable = true;
+    package = pkgs.ollama-cuda;
+  };
+
+  services.keybase.enable = true;
+  services.kbfs.enable = true;
 
   services.openssh = {
     enable = true;
@@ -73,6 +82,8 @@
   nix.optimise.automatic = true;
 
   nixpkgs.config.allowUnfree = true;
+
+  programs.nix-ld.enable = true;
 
   system.stateVersion = "25.11";
 }
