@@ -24,7 +24,7 @@
       {
         context = "Workspace";
         bindings = {
-          "space g" = [
+          "ctrl-g" = [
             "task::Spawn"
             {
               task_name = "lazygit";
