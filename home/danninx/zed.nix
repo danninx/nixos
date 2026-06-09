@@ -4,6 +4,7 @@
     enable = true;
 
     extensions = [
+      "astro"
       "ansible"
       "discord-presence"
       "dockerfile"
@@ -17,6 +18,21 @@
       "opentofu"
       "tokyo-night"
       "toml"
+    ];
+
+    userKeymaps = [
+      {
+        context = "Workspace";
+        bindings = {
+          cmd-g = [
+            "task::Spawn"
+            {
+              task_name = "lazygit";
+              reveal_target = "center";
+            }
+          ];
+        };
+      }
     ];
 
     userSettings = {
@@ -82,5 +98,17 @@
         ];
       };
     };
+
+    userTasks = [
+      {
+        label = "lazygit";
+        command = "lazygit";
+        hide = "on_success";
+        reveal_target = "center";
+        show_summary = false;
+        show_command = false;
+        allow_concurrent_runs = true;
+      }
+    ];
   };
 }
