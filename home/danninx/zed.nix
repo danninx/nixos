@@ -20,11 +20,12 @@
       "toml"
     ];
 
+    mutableUserKeymaps = false;
     userKeymaps = [
       {
         context = "Workspace";
         bindings = {
-          "ctrl-g" = [
+          "alt-c" = [
             "task::Spawn"
             {
               task_name = "lazygit";
@@ -44,6 +45,7 @@
       }
     ];
 
+    mutableUserSettings = false;
     userSettings = {
       telemetry = {
         diagnostics = false;
@@ -108,6 +110,7 @@
       };
     };
 
+    mutableUserTasks = false;
     userTasks = [
       {
         label = "lazygit";
