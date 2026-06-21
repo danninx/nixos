@@ -29,6 +29,7 @@
   home.packages = with pkgs; [
     discord
     fastfetch
+    gimp
     kdePackages.dolphin
     liberation_ttf
     obsidian
