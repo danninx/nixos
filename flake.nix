@@ -53,7 +53,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
-                users.danninx = ./home/danninx;
+                users.danninx = ./hosts/amara/home.nix;
               };
             }
           ];
@@ -72,7 +72,7 @@
                 useGlobalPkgs = true;
                 useUserPackages = true;
                 extraSpecialArgs = { inherit inputs; };
-                users.danninx = ./home/danninx;
+                users.danninx = ./hosts/babel/home.nix;
               };
             }
           ];
