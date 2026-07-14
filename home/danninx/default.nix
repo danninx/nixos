@@ -27,6 +27,7 @@
   };
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
+    bruno
     discord
     fastfetch
     gimp
