@@ -6,3 +6,6 @@ rebuild:
 
 format:
 	nix fmt .
+
+build:
+	sudo nixos-rebuild build --flake $(HOSTPATH)
