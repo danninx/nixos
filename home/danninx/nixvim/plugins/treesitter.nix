@@ -3,7 +3,7 @@ let
   grammars = config.plugins.treesitter.package.builtGrammars;
 in
 {
-  programs.nixvim.plugins.treesitter = {
+  plugins.treesitter = {
     enable = true;
     highlight.enable = true;
     indent.enable = true;
@@ -12,8 +12,7 @@ in
       bash
       c
       cpp
-      golang
-      help
+      go
       make
       markdown
       markdown_inline

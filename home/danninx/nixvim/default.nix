@@ -23,7 +23,7 @@
       providers.wl-copy.enable = true;
     };
 
-    diagnostics.settings = {
+    diagnostic.settings = {
       update_in_insert = true;
       virtual_text = {
         enable = true;
