@@ -50,11 +50,6 @@
     shell = pkgs.zsh;
   };
 
-  services.ollama = {
-    enable = true;
-    package = pkgs.ollama-cuda;
-  };
-
   services.keybase.enable = true;
   services.kbfs.enable = true;
 
