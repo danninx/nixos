@@ -1,10 +1,11 @@
 { pkgs, ... }:
 {
   networking = {
+    enableIPv6 = false;
     firewall = {
       enable = true;
-      allowedTCPPorts = [ ];
-      allowedUDPPorts = [ ];
+      allowedUDPPorts = [ 27015 27036 3478 4379 4380 ];
+      allowedTCPPorts = [ 27015 27036 ];
     };
     networkmanager = {
       enable = true;
@@ -17,6 +18,7 @@
   };
   programs.ssh.startAgent = true;
   services.tailscale.enable = true;
+  services.timesyncd.enable = true;
   environment.systemPackages = with pkgs; [
     openvpn
   ];
