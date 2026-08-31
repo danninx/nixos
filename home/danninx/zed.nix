@@ -6,7 +6,6 @@
     extensions = [
       "astro"
       "ansible"
-      "discord-presence"
       "dockerfile"
       "docker-compose"
       "golangci-lint"
@@ -16,6 +15,7 @@
       "material-icon-theme"
       "nix"
       "opentofu"
+      "svelte"
       "tokyo-night"
       "toml"
     ];
