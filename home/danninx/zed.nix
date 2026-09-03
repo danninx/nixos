@@ -18,6 +18,7 @@
       "svelte"
       "tokyo-night"
       "toml"
+      "sql"
     ];
 
     mutableUserKeymaps = false;
