@@ -68,6 +68,7 @@ in
       PasswordManagerEnabled = false;
 
       Preferences = {
+        "middlemouse.paste" = lockVal false;
         "extensions.pocket.enabled" = lockVal false;
         "extensions.screenshots.disabled" = lockVal true;
         "browser.formfill.enable" = lockVal false;
