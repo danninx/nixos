@@ -109,6 +109,16 @@
           "**playbook*.yml"
         ];
       };
+
+      languages = {
+        CSS = {
+          language_servers = [
+            "tailwindcss-intellisense-css"
+            "!vscode-css-language-server"
+            "..."
+          ];
+        };
+      };
     };
 
     mutableUserTasks = false;
