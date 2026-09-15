@@ -15,6 +15,7 @@
       "material-icon-theme"
       "nix"
       "opentofu"
+      "postgres-language-server"
       "svelte"
       "tokyo-night"
       "toml"
