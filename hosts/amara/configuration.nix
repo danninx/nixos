@@ -44,9 +44,12 @@
       ghostty
       git
       starship
+      rars
     ];
     shell = pkgs.zsh;
   };
+
+  programs.nix-ld.enable = true;
 
   services.thermald.enable = true;
   services.tlp = {
