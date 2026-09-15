@@ -31,6 +31,7 @@
     discord
     fastfetch
     gimp
+    inkscape
     kdePackages.dolphin
     liberation_ttf
     obsidian
