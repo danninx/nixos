@@ -8,6 +8,7 @@
       "ansible"
       "dockerfile"
       "docker-compose"
+      "git-firefly"
       "golangci-lint"
       "html"
       "ini"
