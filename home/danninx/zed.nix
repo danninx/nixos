@@ -46,6 +46,12 @@
           "ctrl-w j" = "workspace::ActivatePaneDown";
         };
       }
+      {
+        context = "vim_mode == normal || ProjectPanel || EmptyPane";
+        bindings = {
+          "ctrl-f" = "file_finder::Toggle";
+        };
+      }
     ];
 
     mutableUserSettings = false;
