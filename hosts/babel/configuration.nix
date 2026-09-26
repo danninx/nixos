@@ -30,7 +30,6 @@
     man-pages
     man-pages-posix
     vim
-    keybase-gui
   ];
 
   programs.zsh.enable = true;
@@ -49,9 +48,6 @@
     ];
     shell = pkgs.zsh;
   };
-
-  services.keybase.enable = true;
-  services.kbfs.enable = true;
 
   services.openssh = {
     enable = true;
