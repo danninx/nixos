@@ -15,6 +15,8 @@
 
   networking.hostName = "amara";
 
+  virtualisation.docker.enableOnBoot = false;
+
   hardware.nvidia = {
     powerManagement = {
       finegrained = true;

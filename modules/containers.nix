@@ -1,7 +1,7 @@
-{ ... }:
+{ lib, ... }:
 {
   virtualisation.docker = {
     enable = true;
-    enableOnBoot = true;
+    enableOnBoot = lib.mkDefault true;
   };
 }
