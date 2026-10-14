@@ -41,9 +41,8 @@ in
         "dbus-update-activation-environment --systemd ALL"
         "systemctl --user import-environment ALL"
         "nm-applet &"
-        "hyprpaper &"
         "hyprctl setcursor BreezeX-RosePine-Linux 28"
-        "hypridle & hyprlock &"
+        "hyprlock &"
       ];
 
       general = {
