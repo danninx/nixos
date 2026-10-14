@@ -13,7 +13,6 @@
     ./hypr
     ./nixvim
     ./starship.nix
-    ./vscode.nix
     ./wofi.nix
     ./zed.nix
     ./zoxide.nix
