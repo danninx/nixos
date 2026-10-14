@@ -1,11 +1,14 @@
 HOST?=$(shell hostname)
 HOSTPATH := '.\#$(HOST)'
+NH := nh
+
+.PHONY: rebuild build format
 
 rebuild:
-	sudo nixos-rebuild switch --flake $(HOSTPATH)
+	$(NH) os switch --ask . -H $(HOST)
+
+build:
+	$(NH) os build . -H $(HOST)
 
 format:
 	nix fmt .
-
-build:
-	sudo nixos-rebuild build --flake $(HOSTPATH)

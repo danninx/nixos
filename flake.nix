@@ -87,6 +87,7 @@
         {
           default = pkgs.mkShell {
             packages = with pkgs; [
+              nh
               nil
               nixd
             ];
