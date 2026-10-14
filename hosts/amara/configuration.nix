@@ -23,13 +23,22 @@
     variant = "";
   };
 
-  environment.systemPackages = with pkgs; [
-    brightnessctl
-    htop
-    man-pages
-    man-pages-posix
-    vim
-  ];
+  environment = {
+    systemPackages = with pkgs; [
+      brightnessctl
+      htop
+      man-pages
+      man-pages-posix
+      vim
+    ];
+
+    sessionVariables = {
+      NIXOS_OZONE_WL = "1";
+      LIBVA_DRIVER_NAME = "nvidia";
+      GBM_BACKEND = "nvidia-drm";
+      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    };
+  };
 
   programs.zsh.enable = true;
   users.users.danninx = {
