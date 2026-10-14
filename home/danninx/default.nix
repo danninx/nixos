@@ -22,9 +22,6 @@
   home.username = "danninx";
   home.homeDirectory = "/home/danninx";
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-  };
   fonts.fontconfig.enable = true;
   home.packages = with pkgs; [
     bruno
@@ -37,7 +34,6 @@
     obsidian
     opencode
     nerd-fonts.jetbrains-mono
-    wofi
   ];
 
   gtk.enable = true;

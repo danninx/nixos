@@ -20,5 +20,4 @@
       custom-shader-animation = true;
     };
   };
-  home.file.".config/ghostty/shaders/cursor_sweep.glsl".source = ./cursor_sweep.glsl;
 }

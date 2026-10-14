@@ -1,13 +1,7 @@
 { pkgs, ... }:
 let
-  font = "JetBrainsMono Nerd Font Bold";
   background = "rgb(1a1b26)";
-  darker = "rgb(16161e)";
-  foreground = "rgb(a9b1d6)";
-  orange = "rgb(e0af68)";
-  red = "rgb(f7768e)";
   red_tran = "rgba(f7768e55)";
-  purple = "rgb(bb9af7)";
   purple_tran = "rgba(bb9af755)";
   transparent = "rgba(0,0,0,0)";
 in
@@ -37,9 +31,6 @@ in
 
     settings = {
       exec-once = [
-        "xdg-user-dirs-update"
-        "dbus-update-activation-environment --systemd ALL"
-        "systemctl --user import-environment ALL"
         "nm-applet &"
         "hyprctl setcursor BreezeX-RosePine-Linux 28"
         "hyprlock &"
