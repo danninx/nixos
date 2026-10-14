@@ -5,18 +5,11 @@
 }:
 {
   imports = [
-    ./alethea-shell.nix
-    ./direnv.nix
+    ./desktop
+    ./dev
+    ./shell
+
     ./firefox.nix
-    ./git.nix
-    ./ghostty.nix
-    ./hypr
-    ./nixvim
-    ./starship.nix
-    ./wofi.nix
-    ./zed.nix
-    ./zoxide.nix
-    ./zsh.nix
   ];
 
   home.username = "danninx";
