@@ -3,62 +3,32 @@
   imports = [
     ./boot.nix
     ./hardware-configuration.nix
-    ./nvidia.nix
 
-    ../../modules/bluetooth.nix
+    ../../modules/core
+    ../../modules/hardware/nvidia.nix
+
     ../../modules/containers.nix
     ../../modules/hyprland.nix
     ../../modules/java.nix
-    ../../modules/locales.nix
-    ../../modules/network.nix
-    ../../modules/pipewire.nix
     ../../modules/stylix.nix
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "amara";
 
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  hardware.nvidia = {
+    powerManagement = {
+      finegrained = true;
+    };
 
-  environment = {
-    systemPackages = with pkgs; [
-      brightnessctl
-      htop
-      man-pages
-      man-pages-posix
-      vim
-    ];
-
-    sessionVariables = {
-      NIXOS_OZONE_WL = "1";
-      LIBVA_DRIVER_NAME = "nvidia";
-      GBM_BACKEND = "nvidia-drm";
-      __GLX_VENDOR_LIBRARY_NAME = "nvidia";
+    prime = {
+      offload = {
+        enable = true;
+        enableOffloadCmd = true;
+      };
+      intelBusId = "PCI:0:2:0";
+      nvidiaBusId = "PCI:1:0:0";
     };
   };
-
-  programs.zsh.enable = true;
-  users.users.danninx = {
-    isNormalUser = true;
-    description = "danninx";
-    extraGroups = [
-      "docker"
-      "networkmanager"
-      "wheel"
-    ];
-    packages = with pkgs; [
-      ghostty
-      git
-      starship
-      rars
-    ];
-    shell = pkgs.zsh;
-  };
-
-  programs.nix-ld.enable = true;
 
   services.thermald.enable = true;
   services.tlp = {
@@ -80,17 +50,6 @@
     };
   };
   services.upower.enable = true;
-
-  nix.settings.experimental-features = [
-    "flakes"
-    "nix-command"
-  ];
-
-  nix.gc.automatic = true;
-  nix.gc.options = "--delete-older-than 7d";
-  nix.optimise.automatic = true;
-
-  nixpkgs.config.allowUnfree = true;
 
   system.stateVersion = "25.11";
 }
