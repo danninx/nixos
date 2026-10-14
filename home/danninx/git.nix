@@ -9,6 +9,15 @@
         email = "danielfajardo@pm.me";
       };
 
+      url = {
+        "git@github.com" = {
+          insteadOf = "github";
+        };
+        "git@gitlab.com" = {
+          insteadOf = "gitlab";
+        };
+      };
+
       core.whitespace = "trailing-space,space-before-tab";
       init.defaultBranch = "main";
       pull.rebase = true;
