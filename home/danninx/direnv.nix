@@ -10,4 +10,6 @@
     enableZshIntegration = true;
     nix-direnv.enable = true;
   };
+
+  home.packages = lib.mkIf config.programs.direnv.enable ([ pkgs.devenv ]);
 }
