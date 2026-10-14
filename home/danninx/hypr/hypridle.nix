@@ -23,7 +23,7 @@
         {
           timeout = 450;
           on-timeout = "hyprctl dispatch dpms off";
-          one-resume = "hyprctl dispatch dpms on && ddcutil setvcp 10 100";
+          on-resume = "hyprctl dispatch dpms on && ddcutil setvcp 10 100";
         }
       ];
     };
