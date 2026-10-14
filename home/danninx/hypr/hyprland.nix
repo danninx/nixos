@@ -8,7 +8,6 @@ in
 {
   imports = [
     ./extra/bindings.nix
-    ./extra/env.nix
     ./extra/rules.nix
     ./extra/workspaces.nix
   ];
