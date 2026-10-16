@@ -12,6 +12,7 @@
       "golangci-lint"
       "html"
       "ini"
+      "lua"
       "make"
       "material-icon-theme"
       "nix"
