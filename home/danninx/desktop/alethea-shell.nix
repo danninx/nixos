@@ -7,6 +7,6 @@
   services.alethea-shell = {
     enable = true;
     enableSystemdIntegration = true;
-    enableHyprlandBindings = true;
+    enableHyprlandBindings = false;
   };
 }
