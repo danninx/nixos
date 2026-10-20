@@ -37,7 +37,7 @@ hl.config({
         },
     },
 
-    animations = { enabled = true },
+    animations = { enabled = false },
 
     misc = { background_color = background },
 })
