@@ -7,6 +7,7 @@
       theme = "TokyoNight";
       font-family = "JetBrainsMono Nerd Font Mono";
       mouse-hide-while-typing = true;
+      cursor-style-blink = false;
 
       shell-integration = "zsh";
 
