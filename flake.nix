@@ -77,6 +77,25 @@
             }
           ];
         };
+
+        godel = nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+          specialArgs = { inherit inputs; };
+          modules = [
+            ./hosts/godel/configuration.nix
+            stylix.nixosModules.stylix
+            home-manager.nixosModules.home-manager
+            {
+              home-manager = {
+                backupFileExtension = "home.bak";
+                useGlobalPkgs = true;
+                useUserPackages = true;
+                extraSpecialArgs = { inherit inputs; };
+                users.danninx = ./hosts/godel/home.nix;
+              };
+            }
+          ];
+        };
       };
 
       devShells = forAllSystems (
