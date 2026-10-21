@@ -22,6 +22,7 @@
       zstyle ':completion:*' list-colors "''${(s.:.)LS_COLORS}"
 
       mkcd() { mkdir -p "$1" && cd "$1"; }
+      flakenv() { echo 'use flake' >> .envrc && direnv allow; }
     '';
 
     shellAliases = {
