@@ -17,5 +17,7 @@
   services.upower.enable = true;
   virtualisation.docker.enableOnBoot = false;
 
+  nix.settings.trusted-users = [ "root" "danninx" ];
+
   system.stateVersion = "25.11";
 }
