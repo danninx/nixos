@@ -2,6 +2,7 @@
 {
   networking = {
     firewall.enable = true;
+    firewall.checkReversePath = false;
     networkmanager = {
       enable = true;
       wifi.scanRandMacAddress = true;
