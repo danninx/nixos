@@ -17,6 +17,13 @@ hl.bind("SUPER + T", hl.dsp.exec_cmd(terminal))
 hl.bind("SUPER + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind("SUPER + X", hl.dsp.exec_cmd(menu_cmd))
 
+-- rebind caps to escape
+hl.config({
+	input = {
+		kb_options = "caps:escape"
+	}
+})
+
 -- volume and brightness
 hl.bind("XF86AudioRaiseVolume", hl.dsp.exec_cmd("wpctl set-volume -l 1 @DEFAULT_AUDIO_SINK@ 5%+"), { locked = true, repeating = true })
 hl.bind("XF86AudioLowerVolume", hl.dsp.exec_cmd("wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"), { locked = true, repeating = true })
