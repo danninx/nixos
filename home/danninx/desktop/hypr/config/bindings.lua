@@ -2,6 +2,7 @@
 --[[ GENERAL BINDINGS ]]
 --
 
+local editor = "zeditor"
 local terminal = "ghostty"
 local filepicker = "dolphin"
 local locker = "hyprlock"
@@ -9,6 +10,7 @@ local menu_cmd = "wofi --show=drun"
 local screenshot_cmd = 'hyprshot --freeze --clipboard-only --mode region; sleep 0.5s && wl-paste | swappy -f -'
 
 hl.bind("SUPER + B", hl.dsp.global("alethea-shell:toggle-bar-active"))
+hl.bind("SUPER + C", hl.dsp.exec_cmd(editor))
 hl.bind("SUPER + F", hl.dsp.window.fullscreen({ mode = "fullscreen", action = "toggle" }))
 hl.bind("SUPER + L", hl.dsp.exec_cmd(locker))
 hl.bind("SUPER + Q", hl.dsp.window.close())
