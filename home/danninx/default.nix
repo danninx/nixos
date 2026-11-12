@@ -26,7 +26,6 @@
     kdePackages.okular
     liberation_ttf
     obsidian
-    opencode
     nerd-fonts.jetbrains-mono
   ];
 
