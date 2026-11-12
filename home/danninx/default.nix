@@ -23,6 +23,7 @@
     gimp
     inkscape
     kdePackages.dolphin
+    kdePackages.okular
     liberation_ttf
     obsidian
     opencode
