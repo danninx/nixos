@@ -6,6 +6,7 @@
 
     ../../modules/core
     ../../modules/hardware/framework-13-pro-intel.nix
+    ../../modules/hardware/yubikey.nix
 
     ../../modules/containers.nix
     ../../modules/hyprland.nix

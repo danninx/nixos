@@ -31,6 +31,8 @@
       la = "ls -alh --color=tty";
       ll = "ls -l --color=tty";
       ls = "ls --color=tty";
+      usb-open = "sudo systemd-cryptsetup attach secureusb /dev/disk/by-partlabel/secure - fido2-device=auto && udisksctl mount -b /dev/mapper/secureusb";
+      usb-close = "udisksctl unmount -b /dev/mapper/secureusb && sudo systemd-cryptsetup detach secureusb && sync";
     };
   };
 }

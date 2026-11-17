@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 {
   networking = {
     firewall.enable = true;
@@ -7,11 +7,9 @@
       enable = true;
       wifi.scanRandMacAddress = true;
       wifi.macAddress = "stable";
-      # plugins = [ pkgs.networkmanager-openvpn ];
     };
   };
-  programs.ssh.startAgent = true;
+  programs.ssh.startAgent = false;
   services.tailscale.enable = true;
   services.timesyncd.enable = true;
-  # environment.systemPackages = with pkgs; [ openvpn ];
 }

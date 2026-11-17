@@ -10,6 +10,7 @@
     ./shell
 
     ./firefox.nix
+    ./gnupg.nix
   ];
 
   home.username = "danninx";
