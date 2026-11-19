@@ -9,6 +9,7 @@
     ../../modules/hardware/yubikey.nix
 
     ../../modules/containers.nix
+    ../../modules/games.nix
     ../../modules/hyprland.nix
     ../../modules/stylix.nix
   ];
